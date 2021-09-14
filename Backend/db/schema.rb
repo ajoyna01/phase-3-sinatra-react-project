@@ -10,17 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_09_14_185639) do
+ActiveRecord::Schema.define(version: 2021_09_14_214031) do
 
-  create_table "meals", force: :cascade do |t|
-    t.string "name"
+  create_table "icecreams", force: :cascade do |t|
+    t.string "brand"
     t.string "imgURL"
-    t.integer "user_id"
+    t.string "flavor"
   end
 
-  create_table "users", force: :cascade do |t|
+  create_table "reviews", force: :cascade do |t|
     t.string "name"
-    t.string "imgURL"
+    t.integer "rating"
+    t.string "review"
+    t.integer "icecream_id"
   end
 
 end

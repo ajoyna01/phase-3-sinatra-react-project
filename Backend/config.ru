@@ -11,5 +11,9 @@ end
 # Parse JSON from the request body into the params hash
 use Rack::JSONBodyParser
 
-# Our application
+# Our application-mounts our maincontroller
 run ApplicationController
+#additional custom controllers; any additional use 'use'
+use IcecreamController
+
+
